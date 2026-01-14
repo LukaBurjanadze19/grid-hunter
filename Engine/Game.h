@@ -42,4 +42,9 @@ private:
 	Graphics gfx;
 	Board brd;
 	Player player;
+	Vei2 playerDelta_Loc = { 0, 0 };
+	bool rightPressed = false;
+	bool leftPressed = false;
+	bool upPressed = false;
+	bool downPressed = false;
 };

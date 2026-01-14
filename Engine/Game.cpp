@@ -40,6 +40,30 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
+	if (wnd.kbd.KeyIsPressed(VK_RIGHT) && !rightPressed)
+	{	
+		rightPressed = true;
+		playerDelta_Loc = { 1, 0 };
+		player.MoveBy(playerDelta_Loc);
+	}
+	if (wnd.kbd.KeyIsPressed(VK_LEFT) && !leftPressed)
+	{	
+		leftPressed = true;
+		playerDelta_Loc = { -1, 0 };
+		player.MoveBy(playerDelta_Loc);
+	}
+	if (wnd.kbd.KeyIsPressed(VK_DOWN) && !downPressed)
+	{	
+		downPressed = true;
+		playerDelta_Loc = { 0, 1 };
+		player.MoveBy(playerDelta_Loc);
+	}
+	if (wnd.kbd.KeyIsPressed(VK_UP) && !upPressed)
+	{	
+		upPressed = true;
+		playerDelta_Loc = { 0, -1 };
+		player.MoveBy(playerDelta_Loc);
+	}
 }
 
 void Game::ComposeFrame()
