@@ -316,11 +316,11 @@ void Graphics::PutPixel( int x,int y,Color c )
 	pSysBuffer[Graphics::ScreenWidth * y + x] = c;
 }
 
-void Graphics::DrawRectDim(int x, int y, int width, int height, Color c)
+void Graphics::DrawRectDim(Vei2 pos, int width, int height, Color c)
 {
-	for (int y0 = y; y0 < y + height; y0++)
+	for (int y0 = pos.y; y0 < pos.y + height; y0++)
 	{
-		for (int x0 = x; x0 < x + width; x0++)
+		for (int x0 = pos.x; x0 < pos.x + width; x0++)
 		{
 			PutPixel(x0, y0, c);
 		}
