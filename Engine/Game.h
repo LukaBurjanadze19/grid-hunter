@@ -25,6 +25,7 @@
 #include "Graphics.h"
 #include "Board.h"
 #include "Vei2.h"
+#include "Player.h"
 
 class Game
 {
@@ -36,12 +37,9 @@ public:
 private:
 	void ComposeFrame();
 	void UpdateModel();
-	/********************************/
-	/*  User Functions              */
-	/********************************/
 private:
 	MainWindow& wnd;
 	Graphics gfx;
 	Board brd;
-	Vei2 pos = { 2, 4 };
+	Player player;
 };

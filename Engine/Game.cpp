@@ -25,7 +25,8 @@ Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
 	gfx( wnd ),
-	brd(20, 20, Colors::Magenta)
+	brd(20, 20),
+	player({2, 1})
 {
 }
 
@@ -43,5 +44,5 @@ void Game::UpdateModel()
 
 void Game::ComposeFrame()
 {
-	brd.DrawCell(pos, gfx);
+	player.Draw(brd, gfx, Colors::Green);
 }
